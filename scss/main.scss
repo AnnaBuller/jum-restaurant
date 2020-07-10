@@ -1,0 +1,19 @@
+@import 'variabilities';
+@import 'utilities';
+@import 'mixins_mediaq';
+
+/* COMPONENTS */
+@import './components/navbar';
+@import './components/header';
+@import './components/phone-order_stripe';
+@import './components/footer';
+
+/* SECTIONS */
+@import './sections/food-container';
+@import './sections/section-1_o-nas';
+@import './sections/section-2_kontakt';
+
+html {
+	scroll-behavior: smooth;
+	-webkit-text-size-adjust: 100%;
+}

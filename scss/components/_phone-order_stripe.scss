@@ -1,0 +1,24 @@
+.phone-order {
+	display: block;
+
+	text-align: center;
+	text-transform: uppercase;
+	line-height: 1.5;
+
+	font-family: $main-font;
+	font-weight: bold;
+
+	padding: 10px;
+
+	border-radius: 0;
+
+	background: $second-color;
+
+	&__text,
+	&__num {
+		display: block;
+
+		font-size: 1.4rem;
+		color: $whiteish;
+	}
+}

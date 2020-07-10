@@ -1,0 +1,207 @@
+.navbar {
+	margin: 20px $margin-sides;
+
+	@include for-phone-land-and-tablet {
+		margin: 20px $margin-sides-medium;
+	}
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+// 	--------------------------------------------------------------------
+// 																LOGO
+// -----------------------------------------------------------------------
+	&__logo-small {
+		fill: $main-color;
+
+		@include for-desktop {
+			display: none;
+		}
+	}
+
+	&__logo-large {
+		display: none;
+
+		@include for-desktop {
+			display: block;
+			flex-grow: 0.4;
+		}
+	}
+
+// 	--------------------------------------------------------------------
+// 																MENU
+// -----------------------------------------------------------------------
+	.menu {
+		position: relative;
+		font-size: 20px;
+
+		&__open {
+			/* CHECKBOX OTWIERAJĄCY I ZAMYKAJĄCY MENU */
+			z-index: 100;
+
+			position: absolute;
+			top: 0;
+			left: 0;
+			transform-origin: top left;
+			transform: scaleX(11) scaleY(4);
+			opacity: 0;
+
+			cursor: pointer;
+		}
+
+		/* PRZYCISK MENU */
+		&__name {
+			z-index: 99;
+			position: relative;
+			width: 140px;
+
+			padding: 0 7px;
+
+			background: $second-color;
+			color: $whiteish;
+
+			border-radius: $round;
+
+			line-height: 50px;
+			text-transform: uppercase;
+			text-align: center;
+			font-family: $main-font;
+			font-size: 1.6rem;
+			font-weight: 500;
+
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+
+			&::after {
+				/* Mała strzałka koło MENU */
+				content: '';
+				width: 0;
+				height: 0;
+				border-left: 7px solid transparent;
+				border-right: 7px solid transparent;
+
+				border-top: 10px solid $whiteish;
+
+				transition: transform 300ms ease-in-out;
+			}
+		}
+
+		&__sections {
+			/* POLE MENU Z SEKCJAMI */
+			z-index: 98;
+			position: absolute;
+			left: calc(50% - 300px / 2);
+			top: 20px;
+			width: 300px;
+
+			padding: 50px 0 20px 0;
+
+			border-radius: $round;
+
+			text-align: center;
+			font-family: $main-font;
+			font-size: 1.6rem;
+
+			background: $grey-dark;
+			box-shadow: 0px 5px 8px rgba(#000, 0.2), 0px 5px 5px 150vw rgba(#fff, 0.6);
+
+			visibility: hidden;
+			opacity: 0;
+
+			transition: all 200ms ease-in-out;
+		}
+
+		&__days,
+		&__items {
+			list-style: none;
+		}
+
+		&__item {
+			padding: 5px;
+			color: $whiteish;
+		}
+
+		&__separator {
+			margin: 10px auto;
+			width: 80%;
+			border: 1px solid $whiteish;
+		}
+	}
+
+	&__item {
+		list-style: none;
+
+		line-height: 50px;
+
+		text-transform: uppercase;
+		text-align: center;
+		font-family: $main-font;
+		font-size: 1.6rem;
+		font-weight: 500;
+		color: $main-color;
+		display: inline-block;
+
+		@include for-phone-only {
+			display: none;
+		}
+	}
+
+	.menu__open:checked ~ .menu__sections {
+		// OTWARCIE I ZAMKNIECIE SIĘ MENU NA KLIKNIECIE CHECKBOXA
+		visibility: visible;
+		opacity: 1;
+	}
+
+	.menu__open:checked ~ .menu__name::after {
+	// ROTACJA SRZAŁKI KOŁO MENU PRZY JEGO ROZSUWANIU
+		transform: rotate(180deg);
+	}
+
+// --------------------------------------------------------------------
+// 																KOSZYK
+// -----------------------------------------------------------------------
+
+	.basket {
+		position: relative;
+
+		&__open {
+			position: absolute;
+			top: 5px;
+			left: 8px;
+
+			transform: scale(3);
+
+			opacity: 0;
+
+			cursor: pointer;
+		}
+
+		&__icon {
+			color: $main-color;
+
+			font-size: 30px;
+		}
+	}
+
+	.basket__field {
+		display: none;
+
+		background-color: $grey-dark;
+
+		.basket-dinner {
+			color: red;
+			&__title {
+				color: $whiteish;
+			}
+		}
+	}
+}
+
+// klasa wyłączająca wyświetlanie ostatnich 2 pozycji wysuwanego menu powyżej 699px
+.menu--hide {
+	@include for-phone-land-and-tablet {
+		display: none;
+	}
+}

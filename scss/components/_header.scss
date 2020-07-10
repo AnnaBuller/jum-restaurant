@@ -1,0 +1,18 @@
+.header {
+	margin: 50px $margin-sides;
+
+	@include for-phone-land-and-tablet {
+		margin: 60px $margin-sides-medium;
+	}
+
+	@include for-desktop {
+		margin: 90px $margin-sides-medium;
+	}
+
+	text-align: center;
+	font-size: 2rem;
+
+	&__day {
+		color: $second-color;
+	}
+}

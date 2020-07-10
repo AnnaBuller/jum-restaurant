@@ -1,0 +1,93 @@
+.food-container {
+	margin: 0 $margin-sides;
+
+	@include for-phone-land-and-tablet {
+		margin: 50px $margin-sides-medium;
+	}
+
+	display: grid;
+	grid-template-columns: repeat(1, minmax(270px, 350px));
+
+	@include for-tablet-land-only {
+		grid-template-columns: repeat(2, minmax(270px, 350px));
+	}
+
+	@include for-desktop {
+		grid-template-columns: repeat(4, minmax(230px, 1fr));
+	}
+
+	justify-content: center;
+	gap: 5vw;
+
+	.dinner {
+		text-align: center;
+		padding-bottom: 80px;
+
+		@include for-phone-land-and-tablet {
+			padding-bottom: 40px;
+		}
+
+		&__img {
+			width: 100%;
+		}
+
+		&__title {
+			color: $main-color;
+			margin: 17px 0;
+
+			@include for-tablet-land {
+				height: 85px;
+			}
+		}
+
+		&__desc {
+			@include for-tablet-land {
+				height: 100px;
+			}
+		}
+
+		&__info {
+			margin: 17px 0;
+
+			display: flex;
+
+			@include for-desktop-1200-1450 {
+				flex-direction: column;
+			}
+
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		&__price,
+		.amount__label {
+			font-family: $second-font;
+			font-size: 1.7rem;
+			color: $main-color;
+		}
+
+		.amount {
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+
+			&__input {
+				display: inline-block;
+				width: 60px;
+				height: 40px;
+
+				margin: 5px;
+				border-radius: $round;
+
+				font-family: $second-font;
+				font-size: 1.3rem;
+				text-align: center;
+
+				&:focus {
+					outline: 0;
+					box-shadow: 0 0 1px 1px $main-color;
+				}
+			}
+		}
+	}
+}
