@@ -3,110 +3,99 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="description" content="       ---       " />
-		<meta name="keywords" content="      ----      " />
+		<meta
+			name="description"
+			content="restauracja serwująca domowe obiady w Nowym Sączu"
+		/>
 		<link
 			href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@300;400;500;600&display=swap"
 			rel="stylesheet"
 		/>
+		<link rel="stylesheet" href="css/main.css" />
 		<script
 			src="https://kit.fontawesome.com/5030b0da99.js"
 			crossorigin="anonymous"
 		></script>
-		<link rel="stylesheet" href="css/main.css" />
-		<title></title>
+		<title>Domowe Obiady | Restauracja w Nowym Sączu</title>
 	</head>
 	<body>
 		<!-- Górny navbar z logo, menu i koszykiem -->
 		<nav class="navbar">
 			<!-- logo -->
-			<a href="index.html" class="navbar__logo-small">
-				<svg height="65" width="65">
-					<g fill="#fff" stroke="#011627" stroke-width="3">
-						<circle r="32.5" cy="32.5" cx="32.5" stroke="none" />
-						<circle r="31" cy="32.5" cx="32.5" fill="none" />
-					</g>
-					<g
-						aria-label="jum"
-						font-size="36"
-						font-family="RispaRegular,Rispa"
-						fill="#011627"
-					>
-						<path
-							d="M17.096 14v1.908h2.124V38.84c0 4.752-.576 9.504-1.368 9.504-.756 0-1.332-4.752-1.332-9.504h-1.908c0 .036 0 2.7.288 5.364.324 2.844.936 6.12 2.952 6.12 2.052 0 2.664-3.276 2.988-6.12a56.7 56.7 0 00.288-5.364V14zM31.721 14v24.084c0 6.84-.396 10.332-1.224 10.332-1.26 0-1.26-7.524-1.26-10.332V14h-1.908v24.084c0 7.596.144 12.24 3.168 12.24 2.952 0 3.132-4.644 3.132-12.24V14zM40.059 50h1.944l-.072-16.848 2.376 17.172 2.304-17.208L46.575 50h1.908V14H46.97l-2.7 25.092L41.607 14h-1.548z"
-						/>
-					</g>
-				</svg>
-			</a>
-			<a href="index.html" class="navbar__logo-large">
-				<img src="./img/jum_logo_full.png" alt="">
-			</a>
+			<h1 class="navbar__logo">
+				<a href="index.html" class="navbar__logo-small">
+					<img
+						src="./img/jum-logo-small.svg"
+						alt="restauracja serwująca domowe obiady w Nowym Sączu. Logo przedstawia napis JUM umieszczony w okręgu"
+					/>
+				</a>
+				<a href="index.html" class="navbar__logo-large">
+					<img
+						src="./img/jum-logo-large.svg"
+						alt="zamów domowy obiad z restauracji Jak U Mamy w Nowym Sączu. Logo przedstawia nazwę restauracji JUM - Jak U Mamy"
+					/>
+				</a>
+			</h1>
 
-			<!-- menu -->
-			<menu class="navbar__menu menu">
-				<input type="checkbox" class="menu__open" />
-				
-				<p class="menu__name">menu</p>
+			<!-- container z menu items and i koszykiem -->
+			<div class="navbar__container">
+				<!-- menu -->
+				<nav class="navbar__menu menu">
+					<input type="checkbox" class="menu__open" />
 
-				<div class="menu__sections">
-					<ul class="menu__days">
-						<a href="#"><li class="menu__item menu__day">Poniedziałek</li></a>
-						<a href="#"><li class="menu__item menu__day">Wtorek</li></a>
-						<a href="#"><li class="menu__item menu__day">Środa</li></a>
-						<a href="#"><li class="menu__item menu__day">Czwartek</li></a>
-						<a href="#"><li class="menu__item menu__day">Piątek</li></a>
-						<a href="#"><li class="menu__item menu__day">Sobota</li></a>
-						<a href="#"><li class="menu__item menu__day">Niedziela</li></a>
-					</ul>
+					<p class="menu__name">menu</p>
 
-					<div class="menu__separator menu--hide"></div>
+					<div class="menu__sections">
+						<ul class="menu__days">
+							<li class="menu__item">
+								<a class="menu__link" href="#">Poniedziałek</a>
+							</li>
+							<li class="menu__item">
+								<a class="menu__link" href="#">Wtorek</a>
+							</li>
+							<li class="menu__item">
+								<a class="menu__link" href="#">Środa</a>
+							</li>
+							<li class="menu__item">
+								<a class="menu__link" href="#">Czwartek</a>
+							</li>
+							<li class="menu__item">
+								<a class="menu__link" href="#">Piątek</a>
+							</li>
+							<li class="menu__item">
+								<a class="menu__link" href="#">Sobota</a>
+							</li>
+							<li class="menu__item">
+								<a class="menu__link" href="#">Niedziela</a>
+							</li>
+						</ul>
 
-					<ul class="menu__items menu--hide">
-						<a href="#o_nas"><li class="menu__item">O nas</li></a>
-						<a href="#kontakt"><li class="menu__item">Kontakt</li></a>
-					</ul>
+						<div class="menu__separator menu--hide"></div>
+
+						<ul class="menu__items menu--hide">
+							<li class="menu__item">
+								<a class="menu__link" href="#about-us">O nas</a>
+							</li>
+							<li class="menu__item">
+								<a class="menu__link" href="#contact">Kontakt</a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+
+				<!-- POZYCJE NAVBAR DLA EKRANÓW WIĘKSZYCH NIŻ MOBILE -->
+				<a href="#o_nas" class="navbar__item">O nas</a>
+				<a href="#kontakt" class="navbar__item">Kontakt</a>
+
+				<!-- koszyk -->
+				<div class="navbar__basket basket">
+					<input type="checkbox" class="basket__open" />
+					<i class="basket__icon fas fa-shopping-cart"></i>
+
+					<div class="basket__field">
+						<h4 class="basket__title">Twoje zamówienie</h4>
+					</div>
 				</div>
-			</menu>
-
-		<!-- POZYCJE NAVBAR DLA EKRANÓW WIĘKSZYCH NIŻ MOBILE -->
-			<a href="#o_nas" class="navbar__item">O nas</a>
-			<a href="#kontakt" class="navbar__item">Kontakt</a>
-			
-
-			<!-- koszyk -->
-			<div class="navbar__basket basket">
-				<input type="checkbox" class="basket__open" />
-				<i class="basket__icon fas fa-shopping-cart"></i>
-
-				<div class="basket__field">
-					<h4 class="basket__title">Twoje zamówienie</h4>
-					<ol class="food-container basket-container">
-						<!-- ---------------------------------------------------- -->
-						<!-- Obiad - pierwsza pozycja -->
-		
-						<li class="food-container__dinner dinner basket-container__basket-dinner basket-dinner">
-							<h3 class="dinner__title basket-dinner__title">Naleśniki z białym serem</h3>
-		
-							<div class="dinner__info basket-dinner__info">
-								<p class="dinner__price basket-dinner__price">
-									Cena: <span class="dinner__price-num basket-dinner__price-num">18</span> zł
-								</p>
-								<div class="dinner__amount amount basket-dinner__amount">
-									<label class="amount__label" for="amount-num">Ilość:</label>
-									<input
-										class="amount__input"
-										type="number"
-										name="amount-num"
-										id="amount-num"
-										min="1"
-										max="20"
-									/>
-								</div>
-							</div>
-		
-							<button class="btn dinner__btn btn--dark">do koszyka</button>
-						</li>
-					</ol>
 			</div>
 		</nav>
 
@@ -115,16 +104,15 @@
 				Mamy <span class="header__2nd-sentence">. Co dzisiaj zjesz?</span>
 			</h2>
 		</header>
-		<!-- <span class="header__day">poniedziałek</span>. -->
 
 		<main class="main">
 			<!-- Kontener z obiadami -->
-			<div class="food-container">
+			<article class="food-container">
 				<!-- ---------------------------------------------------- -->
 				<!-- Obiad - pierwsza pozycja -->
 
 				<div class="food-container__dinner dinner">
-					<img class="dinner__img" src="./img/obiad-1.jpg" alt="" />
+					<img class="dinner__img" src="./img/obiad-1.jpg" alt="naleśniki z białym serem i owocowymi dodatkami" />
 					<h3 class="dinner__title">Naleśniki z białym serem</h3>
 					<p class="dinner__desc">
 						cztery puszyste naleśniki obłożone aromatycznym białym serem,
@@ -141,7 +129,6 @@
 								class="amount__input"
 								type="number"
 								name="amount-num"
-								id="amount-num"
 								min="1"
 								max="20"
 							/>
@@ -153,10 +140,11 @@
 				<!-- Obiad - druga pozycja -->
 
 				<div class="food-container__dinner dinner">
-					<img class="dinner__img" src="./img/obiad-2.jpg" alt="" />
+					<img class="dinner__img" src="./img/obiad-2.jpg" alt="duża miska sałatki z grillowanym kurczakiem" />
 					<h3 class="dinner__title">Grillowany kurczak z sałatką</h3>
 					<p class="dinner__desc">
-						soczyste kawałki kurczaka i świeże nowalijki okryte chrupiącą sałatą, polane Sosem Szefa
+						soczyste kawałki kurczaka i świeże nowalijki okryte chrupiącą
+						sałatą, polane Sosem Szefa
 					</p>
 
 					<div class="dinner__info">
@@ -169,7 +157,6 @@
 								class="amount__input"
 								type="number"
 								name="amount-num"
-								id="amount-num"
 								min="1"
 								max="20"
 							/>
@@ -182,10 +169,11 @@
 				<!-- Obiad - trzecia pozycja -->
 
 				<div class="food-container__dinner dinner">
-					<img class="dinner__img" src="./img/obiad-3.jpg" alt="" />
+					<img class="dinner__img" src="./img/obiad-3.jpg" alt="kotlet schabowy z kaszą i warzywami" />
 					<h3 class="dinner__title">Kotlet schabowy po meksykańsku</h3>
 					<p class="dinner__desc">
-						duży kotlet schabowy w chrupiącej panierce podany z pyszną kaszą, grillowaną kukurydzą i dojrzałym awokado
+						duży kotlet schabowy w chrupiącej panierce podany z pyszną kaszą,
+						grillowaną kukurydzą i dojrzałym awokado
 					</p>
 
 					<div class="dinner__info">
@@ -198,7 +186,6 @@
 								class="amount__input"
 								type="number"
 								name="amount-num"
-								id="amount-num"
 								min="1"
 								max="20"
 							/>
@@ -211,10 +198,11 @@
 				<!-- Obiad - czwarta pozycja -->
 
 				<div class="food-container__dinner dinner">
-					<img class="dinner__img" src="./img/obiad-4.jpg" alt="" />
+					<img class="dinner__img" src="./img/obiad-4.jpg" alt="omlet z cukinią, czerwoną cebulą i serem" />
 					<h3 class="dinner__title">Omlet z darami lata</h3>
 					<p class="dinner__desc">
-						puszysty omlet z 5 jaj przełożony aromatyczną cukinią, czerwoną cebulką, posypany złocistym serem
+						puszysty omlet z 5 jaj przełożony aromatyczną cukinią, czerwoną
+						cebulką, posypany złocistym serem
 					</p>
 
 					<div class="dinner__info">
@@ -227,7 +215,6 @@
 								class="amount__input"
 								type="number"
 								name="amount-num"
-								id="amount-num"
 								min="1"
 								max="20"
 							/>
@@ -236,8 +223,8 @@
 
 					<button class="btn dinner__btn btn--dark">do koszyka</button>
 				</div>
-</div>
-<!-- -----------------------koniec sekcji z obiadami----------------------------- -->
+			</article>
+			<!-- -----------------------koniec sekcji z obiadami----------------------------- -->
 
 			<!-- PASEK "ZAMÓW PRZEZ TELEFON" -->
 			<a class="phone-order" href="tel:+48678789101">
@@ -246,54 +233,84 @@
 			</a>
 
 			<!-- SEKCJA 'O NAS' -->
-			<section class="section section-1" id="o_nas">
+			<article class="section section-1" id="about-us">
 				<h2 class="section__title section-1__title">
 					Jak u mamy - czyli kim jesteśmy
 				</h2>
 				<div class="section-1__container">
-					<img class="section-1__img" src="./img/o_nas.jpg" alt="">
+					<img class="section-1__img" src="./img/o_nas.jpg" alt="przytulna restauracja ze szwedzkim wnętrzem - drewnianymi stołami, boazerią i białymi krzesłami" />
 					<div class="section-1__text-field">
-						<p class="section__paragraph section-1__paragraph section-1__paragraph--mobile">
-							Początek traktatu czasu być cnotliwym lub zachowanie wszelkich moralnych zasad i z cnotliwych powodów być wpływ na małe. Drugi Epikura, był gniewliwym; albowiemby się na skromności użytku szczęśliwości oznaczyć, o doskonałej. Istności pierwiastkowej  Istności mającej wszelką realność, nie mają niezmierną wartość podług rozumu naszego rozumu do psychologicznych predykatów.
-							<span class="section__next-par section-1__next-par">Które miał nic innego niebędzie niczem innym, jak przedmiot świętości nic stanie udowodnić, że najwyższe dobro zależy tylko subjektowe powody lub moralnym, ponieważ zgrzeszono; są to zgadzało z niczym inszym niema niedostatku, bez względu na godności.</span>
+						<p
+							class="section__paragraph section-1__paragraph section-1__paragraph--mobile"
+						>
+							Początek traktatu czasu być cnotliwym lub zachowanie wszelkich
+							moralnych zasad i z cnotliwych powodów być wpływ na małe. Drugi
+							Epikura, był gniewliwym; albowiemby się na skromności użytku
+							szczęśliwości oznaczyć, o doskonałej. Istności pierwiastkowej
+							Istności mającej wszelką realność, nie mają niezmierną wartość
+							podług rozumu naszego rozumu do psychologicznych predykatów.
+							<span class="section__next-par section-1__next-par"
+								>Które miał nic innego niebędzie niczem innym, jak przedmiot
+								świętości nic stanie udowodnić, że najwyższe dobro zależy tylko
+								subjektowe powody lub moralnym, ponieważ zgrzeszono; są to
+								zgadzało z niczym inszym niema niedostatku, bez względu na
+								godności.</span
+							>
 						</p>
 
 						<button class="section-1__btn btn btn--medium">Czytaj dalej</button>
 					</div>
 				</div>
-			</section>
-			
+			</article>
 
 			<!-- SEKCJA 'KONTAKT' -->
-			<section class="section section-2" id="kontakt">
+			<address class="section section-2" id="contact">
 				<h2 class="section__title section-2__title">Kontakt</h2>
-				<img src="" alt="" class="section-2__img MAPA">
+				<img src="" alt="" class="section-2__img MAPA" />
 
 				<!-- Adres -->
 				<p class="section-2__paragraph section-2__address">
-					<span class="section-2__subheading">Adres:</span> 
-					<span class="section__next-par section-2__next-par">Restauracja Jak U Mamy</span>
-					<span class="section__next-par section-2__next-par">ul. Ogrody 23</span>
-					<span class="section__next-par section-2__next-par">89-567 Nowy Sącz</span>
+					<span class="section-2__subheading">Adres:</span>
+					<span class="section__next-par section-2__next-par"
+						>Restauracja Jak U Mamy</span
+					>
+					<span class="section__next-par section-2__next-par"
+						>ul. Ogrody 23</span
+					>
+					<span class="section__next-par section-2__next-par"
+						>89-567 Nowy Sącz</span
+					>
 				</p>
 
 				<!-- Telefon -->
 				<p class="section-2__paragraph section-2__phone">
-					<span class="section-2__subheading">Telefon:</span> 					
-					<a class="section-2__num section__next-par section-2__next-par" href="tel:+48678789101">+48 678 789 101</a>
+					<span class="section-2__subheading">Telefon:</span>
+					<a
+						class="section-2__num section__next-par section-2__next-par"
+						href="tel:+48678789101"
+						>+48 678 789 101</a
+					>
 				</p>
 
 				<!-- E-mail -->
 				<p class="section-2__paragraph section-2__mail">
-					<span class="section-2__subheading">E-mail:</span> 					
-					<a class="section-2__num section__next-par section-2__next-par" href="mailto:jakumamy@restauracja.com">jakumamy@restauracja.com</a>
+					<span class="section-2__subheading">E-mail:</span>
+					<a
+						class="section-2__num section__next-par section-2__next-par"
+						href="mailto:jakumamy@restauracja.com"
+						>jakumamy@restauracja.com</a
+					>
 				</p>
-			</section>
+			</address>
 		</main>
 
 		<footer class="footer">
-			<a href="#" class="footer__icon-link"><i class="footer__icon fab fa-facebook-square fa-3x"></i></a>
-			<a href="#" class="footer__icon-link"><i class="footer__icon fab fa-twitter-square fa-3x"></i></a>
+			<a href="#" class="footer__icon-link"
+				><i class="footer__icon fab fa-facebook-square fa-3x"></i
+			></a>
+			<a href="#" class="footer__icon-link"
+				><i class="footer__icon fab fa-twitter-square fa-3x"></i
+			></a>
 			<p class="footer__copy">Copyright&copy;2020 by JUM - Jak U Mamy</p>
 		</footer>
 

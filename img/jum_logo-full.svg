@@ -12,7 +12,7 @@
    viewBox="0 0 65 65"
    version="1.1"
    id="svg18"
-   sodipodi:docname="jum_logo.svg"
+   sodipodi:docname="jum_logo-full.svg"
    inkscape:version="1.0 (4035a4fb49, 2020-05-01)">
   <metadata
      id="metadata22">
@@ -22,6 +22,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>

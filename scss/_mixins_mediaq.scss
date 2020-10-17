@@ -3,6 +3,12 @@
 		@content;
 	}
 }
+@mixin for-phone-land-only {
+	@media (max-height: 400px) {
+		@content;
+	}
+}
+
 @mixin for-phone-land-and-tablet {
 	@media (min-width: 700px) {
 		@content;
